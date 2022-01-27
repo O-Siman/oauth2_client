@@ -20,7 +20,7 @@ class BrowserWebAuth implements BaseWebAuth {
         .firstWhere((evt) => evt.origin == Uri.parse(redirectUrl).origin);
 
     popupLogin.close();
-    print(messageEvt.data);
-    return messageEvt.data;
+
+    return messageEvt.data['flutter-web-auth'];
   }
 }
